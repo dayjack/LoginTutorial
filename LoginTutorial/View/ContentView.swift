@@ -6,15 +6,17 @@
 //
 
 import SwiftUI
+import Alamofire
 
 struct ContentView: View {
     
     @State var idText: String = ""
     @State var pwdText: String = ""
     
+    
     var body: some View {
         NavigationStack {
-            VStack {
+            VStack(spacing: 40) {
                 
                 TextField("아이디 입력", text: $idText)
                 SecureField("비밀번호 입력", text: $pwdText)
@@ -22,6 +24,11 @@ struct ContentView: View {
                     UserListView()
                 } label: {
                     Text("로그인")
+                }
+                NavigationLink {
+                    SignUpView()
+                } label: {
+                    Text("회원가입")
                 }
             }
             .padding()
