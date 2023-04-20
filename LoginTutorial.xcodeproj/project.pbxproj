@@ -18,6 +18,8 @@
 		786961B629EFF9230046A659 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786961B529EFF9230046A659 /* UserModel.swift */; };
 		786961B829EFFB4B0046A659 /* UserListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786961B729EFFB4B0046A659 /* UserListView.swift */; };
 		78B376C229F0F9F60003C9C0 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78B376C129F0F9F60003C9C0 /* SignUpView.swift */; };
+		78B376C529F11EC00003C9C0 /* Crypto in Frameworks */ = {isa = PBXBuildFile; productRef = 78B376C429F11EC00003C9C0 /* Crypto */; };
+		78B376C729F124090003C9C0 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78B376C629F124090003C9C0 /* StringExtension.swift */; };
 		89FF7D3F2D837C3C41209C59 /* Pods_LoginTutorial.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 657C19D903D53F9CB27FB034 /* Pods_LoginTutorial.framework */; };
 		FD65F38DD768A0CA0DCB857D /* Pods_LoginTutorial_LoginTutorialUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF1D3E5EE88411E500288B4C /* Pods_LoginTutorial_LoginTutorialUITests.framework */; };
 /* End PBXBuildFile section */
@@ -58,6 +60,7 @@
 		786961B729EFFB4B0046A659 /* UserListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListView.swift; sourceTree = "<group>"; };
 		786961B929EFFD960046A659 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		78B376C129F0F9F60003C9C0 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
+		78B376C629F124090003C9C0 /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		9E196D11F13AC9262932AC69 /* Pods-LoginTutorial.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LoginTutorial.debug.xcconfig"; path = "Target Support Files/Pods-LoginTutorial/Pods-LoginTutorial.debug.xcconfig"; sourceTree = "<group>"; };
 		A5C58A5415E4F5BD8C5309D5 /* Pods-LoginTutorial-LoginTutorialUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LoginTutorial-LoginTutorialUITests.release.xcconfig"; path = "Target Support Files/Pods-LoginTutorial-LoginTutorialUITests/Pods-LoginTutorial-LoginTutorialUITests.release.xcconfig"; sourceTree = "<group>"; };
 		D3BCAD4ADF14B8E5A5A26703 /* Pods-LoginTutorial-LoginTutorialUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LoginTutorial-LoginTutorialUITests.debug.xcconfig"; path = "Target Support Files/Pods-LoginTutorial-LoginTutorialUITests/Pods-LoginTutorial-LoginTutorialUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -71,6 +74,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				89FF7D3F2D837C3C41209C59 /* Pods_LoginTutorial.framework in Frameworks */,
+				78B376C529F11EC00003C9C0 /* Crypto in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -169,6 +173,7 @@
 				7869618A29EFF8D30046A659 /* ContentView.swift */,
 				786961B729EFFB4B0046A659 /* UserListView.swift */,
 				78B376C129F0F9F60003C9C0 /* SignUpView.swift */,
+				78B376C629F124090003C9C0 /* StringExtension.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -212,6 +217,9 @@
 			dependencies = (
 			);
 			name = LoginTutorial;
+			packageProductDependencies = (
+				78B376C429F11EC00003C9C0 /* Crypto */,
+			);
 			productName = LoginTutorial;
 			productReference = 7869618529EFF8D30046A659 /* LoginTutorial.app */;
 			productType = "com.apple.product-type.application";
@@ -287,6 +295,9 @@
 				Base,
 			);
 			mainGroup = 7869617C29EFF8D30046A659;
+			packageReferences = (
+				78B376C329F11EC00003C9C0 /* XCRemoteSwiftPackageReference "swift-crypto" */,
+			);
 			productRefGroup = 7869618629EFF8D30046A659 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -434,6 +445,7 @@
 			files = (
 				7869618B29EFF8D30046A659 /* ContentView.swift in Sources */,
 				78B376C229F0F9F60003C9C0 /* SignUpView.swift in Sources */,
+				78B376C729F124090003C9C0 /* StringExtension.swift in Sources */,
 				786961B629EFF9230046A659 /* UserModel.swift in Sources */,
 				7869618929EFF8D30046A659 /* LoginTutorialApp.swift in Sources */,
 				786961B829EFFB4B0046A659 /* UserListView.swift in Sources */,
@@ -769,6 +781,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		78B376C329F11EC00003C9C0 /* XCRemoteSwiftPackageReference "swift-crypto" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apple/swift-crypto.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		78B376C429F11EC00003C9C0 /* Crypto */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 78B376C329F11EC00003C9C0 /* XCRemoteSwiftPackageReference "swift-crypto" */;
+			productName = Crypto;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 7869617D29EFF8D30046A659 /* Project object */;
 }
