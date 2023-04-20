@@ -17,6 +17,7 @@
 		786961A629EFF8D40046A659 /* LoginTutorialUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786961A529EFF8D40046A659 /* LoginTutorialUITestsLaunchTests.swift */; };
 		786961B629EFF9230046A659 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786961B529EFF9230046A659 /* UserModel.swift */; };
 		786961B829EFFB4B0046A659 /* UserListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786961B729EFFB4B0046A659 /* UserListView.swift */; };
+		78B376C229F0F9F60003C9C0 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78B376C129F0F9F60003C9C0 /* SignUpView.swift */; };
 		89FF7D3F2D837C3C41209C59 /* Pods_LoginTutorial.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 657C19D903D53F9CB27FB034 /* Pods_LoginTutorial.framework */; };
 		FD65F38DD768A0CA0DCB857D /* Pods_LoginTutorial_LoginTutorialUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF1D3E5EE88411E500288B4C /* Pods_LoginTutorial_LoginTutorialUITests.framework */; };
 /* End PBXBuildFile section */
@@ -56,6 +57,7 @@
 		786961B529EFF9230046A659 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		786961B729EFFB4B0046A659 /* UserListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListView.swift; sourceTree = "<group>"; };
 		786961B929EFFD960046A659 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		78B376C129F0F9F60003C9C0 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		9E196D11F13AC9262932AC69 /* Pods-LoginTutorial.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LoginTutorial.debug.xcconfig"; path = "Target Support Files/Pods-LoginTutorial/Pods-LoginTutorial.debug.xcconfig"; sourceTree = "<group>"; };
 		A5C58A5415E4F5BD8C5309D5 /* Pods-LoginTutorial-LoginTutorialUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LoginTutorial-LoginTutorialUITests.release.xcconfig"; path = "Target Support Files/Pods-LoginTutorial-LoginTutorialUITests/Pods-LoginTutorial-LoginTutorialUITests.release.xcconfig"; sourceTree = "<group>"; };
 		D3BCAD4ADF14B8E5A5A26703 /* Pods-LoginTutorial-LoginTutorialUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LoginTutorial-LoginTutorialUITests.debug.xcconfig"; path = "Target Support Files/Pods-LoginTutorial-LoginTutorialUITests/Pods-LoginTutorial-LoginTutorialUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -166,6 +168,7 @@
 			children = (
 				7869618A29EFF8D30046A659 /* ContentView.swift */,
 				786961B729EFFB4B0046A659 /* UserListView.swift */,
+				78B376C129F0F9F60003C9C0 /* SignUpView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -188,7 +191,6 @@
 				2E2196835EC4BAB82F9E0D68 /* Pods-LoginTutorialTests.debug.xcconfig */,
 				5B6C3E5216909B3F0FE10ACA /* Pods-LoginTutorialTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -431,6 +433,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7869618B29EFF8D30046A659 /* ContentView.swift in Sources */,
+				78B376C229F0F9F60003C9C0 /* SignUpView.swift in Sources */,
 				786961B629EFF9230046A659 /* UserModel.swift in Sources */,
 				7869618929EFF8D30046A659 /* LoginTutorialApp.swift in Sources */,
 				786961B829EFFB4B0046A659 /* UserListView.swift in Sources */,

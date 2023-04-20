@@ -26,6 +26,7 @@ struct UserListView: View {
                 Text("Fetching data...")
             }
         }
+        .navigationBarBackButtonHidden(true)
         .onAppear {
             fetchData { result in
                 switch result {
