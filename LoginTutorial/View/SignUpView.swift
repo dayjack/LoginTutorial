@@ -18,8 +18,7 @@ struct SignUpView: View {
     @State var isSignedUp: Bool = false
     @State var showingAlert: Bool = false
     
-    @State private var booltext = ""
-    let urlString = "https://example.com/myAPIEndpoint"
+    @State private var responseString = ""
     
     var body: some View {
         

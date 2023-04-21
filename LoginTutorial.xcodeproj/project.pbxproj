@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		05E0EA138334E024FEDB536A /* Pods_LoginTutorialTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54784292963FBE5B57B66715 /* Pods_LoginTutorialTests.framework */; };
+		78330A0129F2C7DC008FA04C /* ViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78330A0029F2C7DC008FA04C /* ViewExtension.swift */; };
+		78330A0429F2C841008FA04C /* lightBlueBtnModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78330A0329F2C841008FA04C /* lightBlueBtnModifier.swift */; };
 		7869618929EFF8D30046A659 /* LoginTutorialApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7869618829EFF8D30046A659 /* LoginTutorialApp.swift */; };
 		7869618B29EFF8D30046A659 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7869618A29EFF8D30046A659 /* ContentView.swift */; };
 		7869618D29EFF8D40046A659 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7869618C29EFF8D40046A659 /* Assets.xcassets */; };
@@ -46,6 +48,8 @@
 		54784292963FBE5B57B66715 /* Pods_LoginTutorialTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LoginTutorialTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B6C3E5216909B3F0FE10ACA /* Pods-LoginTutorialTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LoginTutorialTests.release.xcconfig"; path = "Target Support Files/Pods-LoginTutorialTests/Pods-LoginTutorialTests.release.xcconfig"; sourceTree = "<group>"; };
 		657C19D903D53F9CB27FB034 /* Pods_LoginTutorial.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LoginTutorial.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		78330A0029F2C7DC008FA04C /* ViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExtension.swift; sourceTree = "<group>"; };
+		78330A0329F2C841008FA04C /* lightBlueBtnModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = lightBlueBtnModifier.swift; sourceTree = "<group>"; };
 		7869618529EFF8D30046A659 /* LoginTutorial.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LoginTutorial.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7869618829EFF8D30046A659 /* LoginTutorialApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginTutorialApp.swift; sourceTree = "<group>"; };
 		7869618A29EFF8D30046A659 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -107,6 +111,23 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		783309FB29F2C451008FA04C /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				78B376C629F124090003C9C0 /* StringExtension.swift */,
+				78330A0029F2C7DC008FA04C /* ViewExtension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		78330A0229F2C810008FA04C /* Modifier */ = {
+			isa = PBXGroup;
+			children = (
+				78330A0329F2C841008FA04C /* lightBlueBtnModifier.swift */,
+			);
+			path = Modifier;
+			sourceTree = "<group>";
+		};
 		7869617C29EFF8D30046A659 = {
 			isa = PBXGroup;
 			children = (
@@ -132,6 +153,8 @@
 		7869618729EFF8D30046A659 /* LoginTutorial */ = {
 			isa = PBXGroup;
 			children = (
+				78330A0229F2C810008FA04C /* Modifier */,
+				783309FB29F2C451008FA04C /* Extension */,
 				786961B929EFFD960046A659 /* Info.plist */,
 				7869618829EFF8D30046A659 /* LoginTutorialApp.swift */,
 				786961B429EFF9080046A659 /* Model */,
@@ -173,7 +196,6 @@
 				7869618A29EFF8D30046A659 /* ContentView.swift */,
 				786961B729EFFB4B0046A659 /* UserListView.swift */,
 				78B376C129F0F9F60003C9C0 /* SignUpView.swift */,
-				78B376C629F124090003C9C0 /* StringExtension.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -443,9 +465,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				78330A0429F2C841008FA04C /* lightBlueBtnModifier.swift in Sources */,
 				7869618B29EFF8D30046A659 /* ContentView.swift in Sources */,
 				78B376C229F0F9F60003C9C0 /* SignUpView.swift in Sources */,
 				78B376C729F124090003C9C0 /* StringExtension.swift in Sources */,
+				78330A0129F2C7DC008FA04C /* ViewExtension.swift in Sources */,
 				786961B629EFF9230046A659 /* UserModel.swift in Sources */,
 				7869618929EFF8D30046A659 /* LoginTutorialApp.swift in Sources */,
 				786961B829EFFB4B0046A659 /* UserListView.swift in Sources */,
