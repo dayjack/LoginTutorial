@@ -16,11 +16,11 @@ struct UserListView: View {
         
         VStack {
             if let data = userData {
-                ForEach(data, id: \.id) { object in
+                ForEach(data, id: \.id) {
                     // data는 [UserModel] Type
                     // object는 UserModel Type
                     // UserModel의 프로퍼티 id를 불러오는 ForEach문
-                    Text("Received data: \(object.id)")
+                    Text("Received data: \($0.id)")
                 }
             } else {
                 Text("Fetching data...")
@@ -51,9 +51,9 @@ extension UserListView {
     // MARK: - fetchData
     func fetchData(completion: @escaping (Result<[UserModel], AFError>) -> Void) {
         // 데이터를 받아올 링크
-        AF.request("http://35.72.228.224/adaStudy/getUserList.php")
-            .responseDecodable(of: [UserModel].self) { response in
-                completion(response.result)
+        AF.request("http://35.72.228.224/adaStudy/userList.php")
+            .responseDecodable(of: [UserModel].self) {
+                completion($0.result)
             }
     }
 }
