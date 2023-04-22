@@ -67,14 +67,14 @@ extension SignUpView {
     
     // MARK: - Id 중복 체크 로직
     private func textFieldChanged() {
-        let urlString = "http://35.72.228.224/adaStudy/signup.php?id=\(inputId)"
-        AF.request(urlString).responseString { response in
-            if let data = response.value {
+        
+        let url = "http://35.72.228.224/adaStudy/signup.php"
+        let params = ["id" : inputId] as Dictionary
+        AF.request(url, method: .post, parameters: params).responseString {
+            if let data = $0.value {
                 if data == "true" {
-                    print("response true")
                     isIdDuplicated = true
                 } else if data == "false" {
-                    print("response false")
                     isIdDuplicated = false
                 }
             }
@@ -89,14 +89,13 @@ extension SignUpView {
         let sha256 = SHA256.hash(data: data!)
         let shaData = sha256.compactMap{String(format: "%02x", $0)}.joined()
         
-        let urlString = "http://35.72.228.224/adaStudy/signup.php?id=\(inputId)&pwd=\(shaData)"
-        AF.request(urlString).responseString { response in
-            if let data = response.value {
+        let url = "http://35.72.228.224/adaStudy/signup.php"
+        let params = ["id" : inputId, "pwd" : shaData] as Dictionary
+        AF.request(url, method: .post, parameters: params).responseString {
+            if let data = $0.value {
                 if data == "true" {
-                    print("signup true")
                     self.isSignedUp = true
                 } else if data == "false" {
-                    print("signup false")
                     showingAlert = true
                 }
             }
@@ -113,7 +112,7 @@ extension SignUpView {
             Text("아이디를 입력하세요")
                 .font(.system(.title3))
                 .fontWeight(.bold)
-                
+            
             TextField("아이디 입력란", text: binding)
                 .padding()
                 .background()

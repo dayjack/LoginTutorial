@@ -39,8 +39,6 @@ struct ContentView: View {
             Text("로그인에 실패하였습니다.\n아이디와 비밀번호를 다시 확인해주세요.")
         }
     }
-    
-    
 }
 
 struct ContentView_Previews: PreviewProvider {
@@ -58,10 +56,11 @@ extension ContentView {
         let data = original.data(using: .utf8)
         let sha256 = SHA256.hash(data: data!)
         let shaData = sha256.compactMap{String(format: "%02x", $0)}.joined()
-        let urlString = "http://35.72.228.224/adaStudy/signin.php?id=\(inputId)&pwd=\(shaData)"
-        print(urlString)
-        AF.request(urlString).responseString { response in
-            if let data = response.value {
+        
+        let url = "http://35.72.228.224/adaStudy/signin.php"
+        let params = ["id" : inputId, "pwd" : shaData]
+        AF.request(url, method: .post, parameters: params).responseString {
+            if let data = $0.value {
                 if data == "true" {
                     print("response true")
                     isSignin = true
@@ -72,8 +71,6 @@ extension ContentView {
                 }
             }
         }
-        
-        
     }
     
     // MARK: - idTextField
@@ -119,6 +116,7 @@ extension ContentView {
         .cornerRadius(12)
     }
     
+    // MARK: - signinandup
     func signinandup() -> some View {
         return HStack {
             Button {
